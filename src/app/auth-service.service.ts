@@ -20,7 +20,7 @@ export class AuthServiceService {
 
   dhlAPI(num:any){
     console.log(num);
-    const headers = new HttpHeaders({'DHL-API-Key':'PUXZFuAuYZ7U1dsqo0dkBmuV9DAxWfDK'})
+    const headers = new HttpHeaders({'DHL-API-Key':'Place your DHL API Key'})
     return this.http.get<any>(`https://api-eu.dhl.com/track/shipments?trackingNumber=${num}`,{headers:headers}).pipe(
       map(res=>{
       return res;
